@@ -1,0 +1,26 @@
+{
+  "name": "travel-app-capstone",
+  "version": "1.0.0",
+  "description": "Travel App FEND Capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/index.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldorianmode/travel-app-capstone.git"
+  },
+  "author": "Aldo Vignone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldorianmode/travel-app-capstone/issues"
+  },
+  "homepage": "https://github.com/aldorianmode/travel-app-capstone#readme",
+  "dependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
