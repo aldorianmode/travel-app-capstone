@@ -31,7 +31,7 @@ const postData = async ( url = '', data = {}) => {
     }
 }
 
-
+/*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}
 const getTemperatureByZipCode = async (zipCode) => {
     const weatherData = await getData(`${baseUrl}?zip=${zipCode}&appid=${openWeatherMapAPIKey}`);
@@ -62,3 +62,4 @@ document.getElementById('generate').addEventListener('click', async (e) => {
         })
     });   
 });
+*/
