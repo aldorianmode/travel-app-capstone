@@ -1,6 +1,3 @@
-/* Global Variables */
-const openWeatherMapAPIKey = '7a00298a03b724a26e996218585a69a1';
-const baseUrl = 'http://api.openweathermap.org/data/2.5/weather';
 
 const getData = async (url='') => { 
     const response = await fetch(url, {
