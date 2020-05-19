@@ -31,6 +31,8 @@ const postData = async ( url = '', data = {}) => {
     }
 }
 
+export { getData, postData };
+
 /*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}
 const getTemperatureByZipCode = async (zipCode) => {
