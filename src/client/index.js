@@ -1,5 +1,5 @@
 import { getData, postData } from './js/httpAPI'
-import './styles/styles.scss'
+import './styles/style.scss'
 
 export {
     getData,
