@@ -6,18 +6,25 @@
     </head>
     <body>
         <div id="app">
-            <div class="holder headline">
-                Weather Journal App
+            <div class="header">
+                <h1>Travel App</h1>
             </div>
-            <div class="holder zip">
-                <label for="zip">Enter Zipcode here</label>
-                <input type="text" id="zip" placeholder="enter zip code here">
+            <div class="trip">
+                <div class="trip-destination">
+                    <label for="destination">My trip to:</label>
+                    <input type="text" id="destination" placeholder="Enter where do you want to go">
+                </div>
+                <div class="trip-departure">
+                    <label for="date">Departure:</label>
+                    <input type="date" id="date" placeholder="Enter when do you want to go">
+                </div>
             </div>
+            <!--
             <div class="holder feel">
                 <label for="feelings">How are you feeling today?</label>
                 <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
                 <button id="generate" type="submit"> Generate </button>
-            </div>
+            </div>            
             <div class="holder entry">
                 <div class="title">Most Recent Entry</div>
                 <div id="entryHolder">
@@ -26,6 +33,10 @@
                     <div id="content"></div>
                 </div>
             </div>
+            -->
+            <footer>
+                Developed by Aldo Vignone
+            </footer>
         </div>
     </body>
 </html>
