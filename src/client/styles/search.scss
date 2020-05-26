@@ -1,0 +1,16 @@
+.search {
+    grid-area: search;
+    background: #f23557;
+
+    &-destination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-departure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

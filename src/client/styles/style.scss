@@ -1,17 +1,19 @@
-body{
+@import './search.scss';
+
+body {
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     width: 100%;
     height: 100%;
 }
 
-#app{
+#app {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
     grid-template-areas:
         "header"
-        "trip"
+        "search"
         "footer";
     color: #f0d43a;
     grid-gap: 1em;
@@ -21,23 +23,6 @@ body{
 
 .header {
     grid-area: header;
-}
-
-.search {
-    grid-area: trip;
-    background: #f23557;
-
-    &-destination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &-departure {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 footer {
