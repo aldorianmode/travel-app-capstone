@@ -23,17 +23,17 @@ body{
     grid-area: header;
 }
 
-.trip-search {
+.search {
     grid-area: trip;
     background: #f23557;
 
-    &__destination {
+    &-destination {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    &__departure {
+    &-departure {
         display: flex;
         justify-content: center;
         align-items: center;
