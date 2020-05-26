@@ -1,4 +1,12 @@
 .result {
     grid-area: result;
     background: #f23557;
+
+    &-layout {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "image"
+            "data";
+    }
 }
