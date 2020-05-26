@@ -1,5 +1,6 @@
-@import './search.scss';
 @import './header.scss';
+@import './search.scss';
+@import './result.scss';
 @import './footer.scss';
 
 body {
@@ -16,6 +17,7 @@ body {
     grid-template-areas:
         "header"
         "search"
+        "result"
         "footer";
     color: #f0d43a;
     grid-gap: 1em;
