@@ -1,16 +1,27 @@
 .search {
     grid-area: search;
     background: #f23557;
-
-    &-destination {
+    
+    &-input {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        justify-content: center;        
 
-    &-departure {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        &__destination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+        }
+    
+        &__departure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+        }
+
+        #submit {
+            padding: 0 5px;
+        }
+    }    
 }
