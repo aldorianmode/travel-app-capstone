@@ -11,3 +11,5 @@ const getCityInfo = async (cityName) => {
         'lng': firstResult.lng,
     };
 };
+
+export { getCityInfo };
