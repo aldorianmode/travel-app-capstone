@@ -1,3 +1,5 @@
+const serverBaseUrl = 'http://localhost:8081';
+
 const getData = async (url='') => { 
     const response = await fetch(url, {
         method: 'GET', 
@@ -30,7 +32,11 @@ const postData = async ( url = '', data = {}) => {
     }
 }
 
-export { getData, postData };
+const getCityData = async (cityName) => {
+    return await getData(`${serverBaseUrl}/getCityData?cityName=${cityName}`);
+}
+
+export { getCityData };
 
 /*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}
