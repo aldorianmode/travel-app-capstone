@@ -32,11 +32,11 @@ const postData = async ( url = '', data = {}) => {
     }
 }
 
-const getCityData = async (cityName) => {
-    return await getData(`${serverBaseUrl}/getCityData?cityName=${cityName}`);
+const getDestinationData = async (destinationName) => {
+    return await getData(`${serverBaseUrl}/getDestinationData?destinationName=${destinationName}`);
 }
 
-export { getCityData };
+export { getDestinationData };
 
 /*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}

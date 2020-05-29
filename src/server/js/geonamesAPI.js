@@ -2,8 +2,8 @@ import { getData } from './httpAPI';
 
 const baseUrl = 'http://api.geonames.org/';
 
-const getCityInfo = async (cityName) => {
-    const result = getData(`${baseUrl}searchJSON?username=${process.env.GEONAMES_USR}&name_startsWith=${cityName}&maxRows=10`);
+const getDestinationInfo = async (destinationName) => {
+    const result = getData(`${baseUrl}searchJSON?username=${process.env.GEONAMES_USR}&name_startsWith=${destinationName}&maxRows=10`);
     const firstResult = result.geonames[0];
     return {
         'name': firstResult.name,
@@ -12,4 +12,4 @@ const getCityInfo = async (cityName) => {
     };
 };
 
-export { getCityInfo };
+export { getDestinationInfo };
