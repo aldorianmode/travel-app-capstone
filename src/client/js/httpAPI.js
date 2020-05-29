@@ -1,4 +1,4 @@
-const serverBaseUrl = 'http://localhost:8081';
+const serverBaseUrl = 'http://localhost:8081/';
 
 const getData = async (url='') => { 
     const response = await fetch(url, {
@@ -33,7 +33,7 @@ const postData = async ( url = '', data = {}) => {
 }
 
 const getDestinationData = async (destinationName) => {
-    return await getData(`${serverBaseUrl}/getDestinationData?destinationName=${destinationName}`);
+    return await getData(`${serverBaseUrl}getDestinationData?destinationName=${destinationName}`);
 }
 
 export { getDestinationData };
