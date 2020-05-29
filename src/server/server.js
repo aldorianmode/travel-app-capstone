@@ -29,7 +29,7 @@ app.get('/test', function (req, res) {
 })
 
 app.get('/getDestinationData', async (req, res) => {
-    const destinationName = req.body.destinationName;
+    const destinationName = req.query.destinationName;
     const destinationInfo = await getDestinationInfo(destinationName);
     res.send(destinationInfo);
 })
