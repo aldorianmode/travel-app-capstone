@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const { getDestinationInfo } = require('./js/geonamesAPI');
 
 // Config environment
 dotenv.config();
@@ -25,6 +26,12 @@ app.get('/', function (req, res) {
 
 app.get('/test', function (req, res) {
     res.send({'mock': 'test'});
+})
+
+app.get('/getDestinationData', async (req, res) => {
+    const destinationName = req.body.destinationName;
+    const destinationInfo = await getDestinationInfo(destinationName);
+    res.send(destinationInfo);
 })
 
 // Setup Server

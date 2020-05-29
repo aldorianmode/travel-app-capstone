@@ -1,4 +1,4 @@
-import { getData } from './httpAPI';
+const { getData } = require('./httpAPI');
 
 const baseUrl = 'http://api.geonames.org/';
 
@@ -12,4 +12,4 @@ const getDestinationInfo = async (destinationName) => {
     };
 };
 
-export { getDestinationInfo };
+module.exports = { getDestinationInfo };

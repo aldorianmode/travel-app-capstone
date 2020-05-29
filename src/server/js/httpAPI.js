@@ -30,4 +30,4 @@ const postData = async ( url = '', data = {}) => {
     }
 }
 
-export { getData, postData };
+module.exports = { getData, postData };
