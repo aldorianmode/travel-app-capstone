@@ -1,8 +1,8 @@
-import { formHandler } from './formHandler'
+import { handleSubmit } from './formHandler'
 
 function addEventListeners() {
     // Add event listener to 'Search' submit button
-    document.getElementById('searchSubmit').addEventListener('click', formHandler);
+    document.getElementById('searchSubmit').addEventListener('click', handleSubmit);
 };
 
 export { addEventListeners };
