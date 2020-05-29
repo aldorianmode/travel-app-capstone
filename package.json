@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/aldorianmode/travel-app-capstone#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.0",
     "webpack": "^4.43.0",
