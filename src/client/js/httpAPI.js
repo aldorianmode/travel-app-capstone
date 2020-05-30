@@ -36,7 +36,11 @@ const getDestinationData = async (destinationName) => {
     return await getData(`${serverBaseUrl}getDestinationData?destinationName=${destinationName}`);
 }
 
-export { getDestinationData };
+const getWeatherData = async (date, lat, lon) => {
+    return await getData(`${serverBaseUrl}getWeatherData?date=${date}&lat=${lat}&lon${lon}`);
+}
+
+export { getDestinationData, getWeatherData };
 
 /*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}
