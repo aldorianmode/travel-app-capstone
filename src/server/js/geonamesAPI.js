@@ -8,7 +8,7 @@ const getDestinationInfo = async (destinationName) => {
     return {
         'name': firstResult.name,
         'lat': firstResult.lat,
-        'lng': firstResult.lng,
+        'lon': firstResult.lng,
     };
 };
 
