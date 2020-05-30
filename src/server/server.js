@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const { getDestinationInfo } = require('./js/geonamesAPI');
+const { getCurrentWeather, getForecastWeather } = require('./js/weatherBitAPI');
 
 // Config environment
 dotenv.config();
@@ -32,6 +33,20 @@ app.get('/getDestinationData', async (req, res) => {
     const destinationName = req.query.destinationName;
     const destinationInfo = await getDestinationInfo(destinationName);
     res.send(destinationInfo);
+})
+
+app.get('/getCurrentWeatherData', async (req, res) => {
+    const lat = req.query.lat;
+    const lon = req.query.lon;
+    const currWeather = await getCurrentWeather(lat, lon);
+    res.send(currWeather);
+})
+
+app.get('/getForecastWeatherData', async (req, res) => {
+    const lat = req.query.lat;
+    const lon = req.query.lon;
+    const forcWeather = await getForecastWeather(lat, lon);
+    res.send(forcWeather);
 })
 
 // Setup Server
