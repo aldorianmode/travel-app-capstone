@@ -37,11 +37,11 @@ const getDestinationData = async (destinationName) => {
 }
 
 const getCurrentWeatherData = async (lat, lon) => {
-    return await getData(`${serverBaseUrl}getCurrentWeatherData?lat=${lat}&lon${lon}`);
+    return await getData(`${serverBaseUrl}getCurrentWeatherData?lat=${lat}&lon=${lon}`);
 }
 
 const getForecastWeatherData = async (lat, lon) => {
-    return await getData(`${serverBaseUrl}getForecastWeatherData?lat=${lat}&lon${lon}`);
+    return await getData(`${serverBaseUrl}getForecastWeatherData?lat=${lat}&lon=${lon}`);
 }
 
 export { getDestinationData, getCurrentWeatherData, getForecastWeatherData };
