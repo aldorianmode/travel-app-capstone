@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const { getDestinationInfo } = require('./js/geonamesAPI');
 const { getCurrentWeather, getForecastWeather } = require('./js/weatherBitAPI');
+const { getImageUrl } = require('./js/pixabayAPI');
 
 // Config environment
 dotenv.config();
@@ -32,6 +33,8 @@ app.get('/test', function (req, res) {
 app.get('/getDestinationData', async (req, res) => {
     const destinationName = req.query.destinationName;
     const destinationInfo = await getDestinationInfo(destinationName);
+    const { imageUrl } = await getImageUrl(destinationName);
+    destinationInfo.imageUrl = imageUrl;
     res.send(destinationInfo);
 })
 
