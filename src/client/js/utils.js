@@ -7,5 +7,14 @@ const getDaysLeftFromNow = (dateStr) => {
     const diffTime = Math.abs(nowDate - dateFrom);
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 };
+// tripInfo = { destinationInfo, weatherInfo, startDate, endDate }
+const setTripResultHTMLElement = (tripInfo) => {
+    document.getElementById('result-data__location').textContent = tripInfo.destinationInfo.name;
+    document.getElementById('result-data__weather').textContent = tripInfo.weatherInfo.temp;
+    document.getElementById('result-data__departure').textContent = tripInfo.startDate;
+    document.getElementById('result-data__arrival').textContent = tripInfo.endDate;
+    document.getElementById('result-img').src = tripInfo.destinationInfo.imageUrl;
 
-export { getDaysLeftFromNow };
+};
+
+export { getDaysLeftFromNow, setTripResultHTMLElement };
