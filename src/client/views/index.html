@@ -10,7 +10,7 @@
                 <h1>Travel App</h1>
             </div>
             <div class="search">
-                <h2>Search your next trip</h2>
+                <h2>Add your next trip</h2>
                 <div class="search-input">
                     <div class="search-input__destination">
                         <label for="destination">My trip to:</label>
@@ -18,28 +18,39 @@
                     </div>
                     <div class="search-input__departure">
                         <label for="date">Departure:</label>
-                        <input type="date" id="date" placeholder="Enter when do you want to go">
+                        <input type="date" id="startDate" placeholder="Enter when do you want to go">
+                    </div>
+                    <div class="search-input__arrival">
+                        <label for="date">Arrival:</label>
+                        <input type="date" id="endDate" placeholder="Enter when do you want to return">
                     </div>
                     <button id="searchSubmit" type="submit">Search</button>
                 </div>
             </div>
             <div class="result">
-                <h2>Result:</h2>
+                <h2>Your trip:</h2>
                 <div class="result-layout">
-                    <div class="result-img"></div>
-                    <div class="result-data">
-                        <div class="result-data__location">
+                    <div class="result-layout__img">
+                        <img id="result-img" alt="Destination image" src="https://img.icons8.com/cute-clipart/100/000000/suitcase.png" />
+                    </div>
+                    <div class="result-layout__data">
+                        <div class="result-layout__data-location">
                             <h3>Location:</h3>
-                            <div id="result-data__location"></div>
+                            <div id="result-layout__data-location"></div>
                         </div>
-                        <div class="result-data__departure">
+                        <div class="result-layout__data-departure">
                             <h3>Departure:</h3>
-                            <div id="result-data__departure"></div>
+                            <div id="result-layout__data-departure"></div>
+                        </div>
+                        <div class="result-layout__data-arrival">
+                            <h3>Arrival:</h3>
+                            <div id="result-layout__data-arrival"></div>
                         </div>
                         <!--TODO: Add Save and Remove buttons-->
-                        <div class="result-data__weather">
+                        <div class="result-layout__data-weather">
                             <h3>Weather:</h3>
-                            <div id="result-data__weather"></div>
+                            <!--TODO: Show temp and app temp-->
+                            <div id="result-layout__data-weather"></div>
                         </div>
                     </div>
                 </div>
