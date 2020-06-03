@@ -7,14 +7,28 @@ const getDaysLeftFromNow = (dateStr) => {
     const diffTime = Math.abs(nowDate - dateFrom);
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 };
+
+const getDaysBetweenDates = (dateA, dateB) => {
+    const daysLeftFromNowA = getDaysLeftFromNow(dateA);
+    const daysLeftFromNowB = getDaysLeftFromNow(dateB);
+    return Math.abs(daysLeftFromNowA - daysLeftFromNowB);
+};
+
 // tripInfo = { destinationInfo, weatherInfo, startDate, endDate }
 const setTripResultHTMLElement = (tripInfo) => {
-    document.getElementById('result-data__location').textContent = tripInfo.destinationInfo.name;
-    document.getElementById('result-data__weather').textContent = tripInfo.weatherInfo.temp;
-    document.getElementById('result-data__departure').textContent = tripInfo.startDate;
-    document.getElementById('result-data__arrival').textContent = tripInfo.endDate;
-    document.getElementById('result-img').src = tripInfo.destinationInfo.imageUrl;
-
+    const daysLeft = getDaysLeftFromNow(tripInfo.startDate);
+    const tripLength = getDaysBetweenDates(tripInfo.startDate, tripInfo.endDate);
+    document.getElementById('resultLocationName').textContent = tripInfo.destinationInfo.name;
+    document.getElementById('resultDepartureDate').textContent = tripInfo.startDate;
+    document.getElementById('resultDepartureDaysLeft').textContent = daysLeft;
+    document.getElementById('resultArrivalDate').textContent = tripInfo.endDate;
+    document.getElementById('resultTripLength').textContent = tripLength;
+    document.getElementById('resultWeatherTemp').textContent = tripInfo.weatherInfo.temp;
+    document.getElementById('resultWeatherAppTemp').textContent = tripInfo.weatherInfo.app_temp;
+    document.getElementById('resultWeatherDescription').textContent = tripInfo.weatherInfo.description;
+    if (tripInfo.imageUrl) {
+        document.getElementById('resultImg').src = tripInfo.destinationInfo.imageUrl;
+    }
 };
 
 export { getDaysLeftFromNow, setTripResultHTMLElement };
