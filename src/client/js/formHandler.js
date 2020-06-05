@@ -16,11 +16,27 @@ async function handleSubmit(event) {
     // Get trip's end date input
     const endDate = document.getElementById('endDate').value;
 
-    if (!destination && !startDate && !endDate) {
-        //TODO: Set border colors to the empty inputs
+    if (!destination) {
+        document.getElementById('destination').classList.add("is_empty");
+    } else {
+        document.getElementById('destination').classList.remove("is_empty");
+    }
+
+    if (!startDate) {
+        document.getElementById('startDate').classList.add("is_empty");
+    } else {
+        document.getElementById('startDate').classList.remove("is_empty");
+    }
+
+    if (!endDate) {
+        document.getElementById('endDate').classList.add("is_empty");
+    } else {
+        document.getElementById('endDate').classList.remove("is_empty");
+    }
+
+    if (!destination || !startDate || !endDate) {
         return;
     }
-    // TODO: Add input values consistency
 
     const destinationDataResp = await getDestinationData(destination);
     if (destinationDataResp.ok) {
