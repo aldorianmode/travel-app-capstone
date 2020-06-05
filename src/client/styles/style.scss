@@ -18,13 +18,13 @@ body {
 #app {
     width: 100%;
     display: grid;
-    grid-template-rows: 20% 15% auto;
+    grid-template-rows: 15vh 15vh auto;
     grid-template-areas:
         "header"
         "search"
         "result"
         "footer";
     color: black;
-    grid-gap: 1em;
+    grid-gap: 2vh;
     font-size: 20px;
 }
