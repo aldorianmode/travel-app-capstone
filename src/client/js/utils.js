@@ -26,7 +26,7 @@ const setTripResultHTMLElement = (tripInfo) => {
     document.getElementById('resultWeatherTemp').textContent = tripInfo.weatherInfo.temp;
     document.getElementById('resultWeatherAppTemp').textContent = tripInfo.weatherInfo.app_temp;
     document.getElementById('resultWeatherDescription').textContent = tripInfo.weatherInfo.description;
-    if (tripInfo.imageUrl) {
+    if (tripInfo.destinationInfo.imageUrl) {
         document.getElementById('resultImg').src = tripInfo.destinationInfo.imageUrl;
     }
 };
