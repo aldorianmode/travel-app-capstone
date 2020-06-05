@@ -7,7 +7,9 @@
     <body>
         <div id="app">
             <div class="header">
-                <h1>Travel App</h1>
+                <div class="header-title">
+                    <h1>Travel App</h1>
+                </div>
             </div>
             <div class="search">
                 <h2>Add your next trip</h2>
@@ -24,7 +26,7 @@
                         <label for="date">Arrival:</label>
                         <input type="date" id="endDate" placeholder="Enter when do you want to return">
                     </div>
-                    <button id="searchSubmit" type="submit">Search</button>
+                    <button id="searchSubmit" type="submit">Add</button>
                 </div>
             </div>
             <div class="result">
@@ -49,7 +51,7 @@
                         </div>
                         <!--TODO: Add Save and Remove buttons-->
                         <div class="result-layout__data-weather">
-                            <h3>Weather:</h3>
+                            <h3>Estimated weather:</h3>
                             <div class="result-layout__data-weather-temp" id="resultWeatherTemp"></div>
                             <div class="result-layout__data-weather-apptemp" id="resultWeatherAppTemp"></div>
                             <div class="result-layout__data-weather-description"id="resultWeatherDescription"></div>
@@ -57,21 +59,6 @@
                     </div>
                 </div>
             </div>
-            <!--
-            <div class="holder feel">
-                <label for="feelings">How are you feeling today?</label>
-                <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-                <button id="generate" type="submit"> Generate </button>
-            </div>            
-            <div class="holder entry">
-                <div class="title">Most Recent Entry</div>
-                <div id="entryHolder">
-                    <div id="date"></div> 
-                    <div id="temp"></div>
-                    <div id="content"></div>
-                </div>
-            </div>
-            -->
             <footer>
                 Developed by Aldo Vignone
             </footer>
