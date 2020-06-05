@@ -6,12 +6,18 @@ const getData = async (url='') => {
         mode: 'cors'
     });
     try {
-        // Do request
-        const data = await response.json();
-        return data;
+        const ret = { 
+            ok : response.ok,
+            status : response.status,
+        };
+
+        if (response.ok) {
+            ret.data = await response.json();
+        }
+        return ret;
     }
     catch(error) {
-      console.log("error", error);
+        console.log("error", error);
     }
 };
 
@@ -24,8 +30,19 @@ const postData = async ( url = '', data = {}) => {
         },
         body: JSON.stringify(data),       
     });
-    try { 
-      return await response.json();
+    try {
+        const ret = { 
+            ok : response.ok,
+            status : response.status,
+        };
+
+        if (response.ok &&
+            response.headers.has('Content-Type') &&
+            response.headers.get('Content-Type') === 'application/json') {
+
+            ret.data = await response.json();
+        }
+        return ret;
     }
     catch(error) {
         console.log("error", error);
@@ -44,7 +61,21 @@ const getForecastWeatherData = async (lat, lon) => {
     return await getData(`${serverBaseUrl}getForecastWeatherData?lat=${lat}&lon=${lon}`);
 }
 
-export { getDestinationData, getCurrentWeatherData, getForecastWeatherData };
+const getTrip = async () => {
+    return await getData(`${serverBaseUrl}getTrip`);
+}
+
+const saveTrip = async (trip) => {
+    return await postData(`${serverBaseUrl}saveTrip`, trip);
+}
+
+export { 
+    getDestinationData,
+    getCurrentWeatherData,
+    getForecastWeatherData,
+    getTrip,
+    saveTrip,
+};
 
 /*
 // Reference: https://openweathermap.org/current#{By ZIP CODE}
