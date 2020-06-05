@@ -5,8 +5,16 @@
     align-items: center;
     font-size: 30px;
 
-    & > h1 {
-        vertical-align: middle;
+    &-title {
         margin-left: 5%;
+        padding: 2%;
+        width: 30%;
+        background-color: #00B2CA;
+
+        & > h1 {
+            vertical-align: middle;
+            white-space: nowrap;
+            color: black;
+        }
     }
 }

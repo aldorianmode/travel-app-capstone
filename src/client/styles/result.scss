@@ -1,6 +1,6 @@
 .result {
     grid-area: result;
-    background: #79B993;
+    background: #7DCFB6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
 
         &__img {
             grid-area: image;
-            width: 200px;
+            width: 100%;
             height: 200px;
             & > img {
                 background-color: white;
@@ -36,11 +36,64 @@
         &__data {
             grid-area: data;
             justify-self: start;
+            padding-left: 5%;
 
             &-location {
-                display: inline-block;
                 & > h3 {
                     font-weight: bold;
+                    display: inline-block;
+                }
+
+                &-name {
+                    display: inline-block;
+                }
+            }
+
+            &-departure {
+                & > h3 {
+                    font-weight: bold;
+                    display: inline-block;
+                }
+
+                &-date {
+                    display: inline-block;
+                }
+
+                &-daysLeft {
+                    display: inline-block;
+                    font-style: italic;
+                }
+            }
+
+            &-arrival {
+                & > h3 {
+                    font-weight: bold;
+                    display: inline-block;
+                }
+
+                &-date {
+                    display: inline-block;
+                }
+
+                &-tripLength {
+                    display: inline-block;
+                    font-style: italic;
+                }
+            }
+
+            &-weather {
+                & > h3 {
+                    font-weight: bold;
+                }
+
+                &-temp,
+                &-apptemp,
+                &-description {
+                    padding-left: 5%;
+                }
+
+                &-description {
+                    font-style: italic;
                 }
             }
         }

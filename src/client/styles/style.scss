@@ -3,6 +3,11 @@
 @import './result.scss';
 @import './footer.scss';
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background: #fffff8;
     font-family: Gadugi, sans-serif;
