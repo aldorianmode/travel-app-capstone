@@ -30,7 +30,7 @@
             <div class="result">
                 <div class="result-layout">
                     <div class="result-layout__img">
-                        <img id="result-img" alt="Destination image" src="https://img.icons8.com/cute-clipart/100/000000/suitcase.png" />
+                        <img id="resultImg" alt="Destination image" src="https://img.icons8.com/cute-clipart/100/000000/suitcase.png" />
                     </div>
                     <div class="result-layout__data">
                         <div class="result-layout__data-location">
@@ -44,15 +44,15 @@
                         </div>
                         <div class="result-layout__data-arrival">
                             <h3>Arrival:</h3>
-                            <div class="result-layout__data-arrival-date"></div>
-                            <div class="result-layout__data-arrival-tripLength"></div>
+                            <div class="result-layout__data-arrival-date" id="resultArrivalDate"></div>
+                            <div class="result-layout__data-arrival-tripLength" id="resultTripLength"></div>
                         </div>
                         <!--TODO: Add Save and Remove buttons-->
                         <div class="result-layout__data-weather">
                             <h3>Weather:</h3>
-                            <div class="result-layout__data-weather-temp"></div>
-                            <div class="result-layout__data-weather-apptemp"></div>
-                            <div class="result-layout__data-weather-description"></div>
+                            <div class="result-layout__data-weather-temp" id="resultWeatherTemp"></div>
+                            <div class="result-layout__data-weather-apptemp" id="resultWeatherAppTemp"></div>
+                            <div class="result-layout__data-weather-description"id="resultWeatherDescription"></div>
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,7 @@
             });
         }
 
-        window.addEventListener('load', () => {
-            Client.addEventListeners();
-        });
+        window.addEventListener('load', Client.init());
+
     </script>
 </html>
