@@ -20,11 +20,11 @@ const setTripResultHTMLElement = (tripInfo) => {
     const tripLength = getDaysBetweenDates(tripInfo.startDate, tripInfo.endDate);
     document.getElementById('resultLocationName').textContent = tripInfo.destinationInfo.name;
     document.getElementById('resultDepartureDate').textContent = tripInfo.startDate;
-    document.getElementById('resultDepartureDaysLeft').textContent = daysLeft;
+    document.getElementById('resultDepartureDaysLeft').textContent = `(${daysLeft} day to start your trip!)`;
     document.getElementById('resultArrivalDate').textContent = tripInfo.endDate;
-    document.getElementById('resultTripLength').textContent = tripLength;
-    document.getElementById('resultWeatherTemp').textContent = tripInfo.weatherInfo.temp;
-    document.getElementById('resultWeatherAppTemp').textContent = tripInfo.weatherInfo.app_temp;
+    document.getElementById('resultTripLength').textContent = `(trip duration: ${tripLength} days)`;
+    document.getElementById('resultWeatherTemp').textContent = `Temperature: ${tripInfo.weatherInfo.temp}°C`;
+    document.getElementById('resultWeatherAppTemp').textContent = `Feels like: ${tripInfo.weatherInfo.app_temp}°C`;
     document.getElementById('resultWeatherDescription').textContent = tripInfo.weatherInfo.description;
     if (tripInfo.destinationInfo.imageUrl) {
         document.getElementById('resultImg').src = tripInfo.destinationInfo.imageUrl;
