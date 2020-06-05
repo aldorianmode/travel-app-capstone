@@ -1,4 +1,4 @@
-import { init } from './js/utils';
+import { init } from './js/init';
 import './styles/resetCss.scss';
 import './styles/style.scss';
 
