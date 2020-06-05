@@ -30,6 +30,11 @@
             & > input {
                 font-size: 17px;
             }
+
+            & > input.is_empty {
+                background-color: #ff000045;
+                border: 2px solid red;
+            }
         }    
 
         & > #searchSubmit {
