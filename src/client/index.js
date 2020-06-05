@@ -1,8 +1,8 @@
-import { addEventListeners } from './js/addEventListeners';
+import { init } from './js/utils';
 import './styles/resetCss.scss';
 import './styles/style.scss';
 
 
 export {
-    addEventListeners,
+    init,
 }
