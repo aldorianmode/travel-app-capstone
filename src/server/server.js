@@ -21,6 +21,9 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 app.use(cors());
 
+// Data base object
+const tripsDB = [];
+
 // Routes
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
@@ -50,6 +53,23 @@ app.get('/getForecastWeatherData', async (req, res) => {
     const lon = req.query.lon;
     const forcWeather = await getForecastWeather(lat, lon);
     res.send(forcWeather);
+})
+
+app.post('/saveTrip', async (req, res) => {
+    const trip = req.body;
+    tripsDB.push(trip);
+    res.status(201).end();
+})
+
+app.get('/getTrip', async (req, res) => {
+    // TODO: request should contain a trip ID and return the desired one. For now we are only storing one trip
+    if (tripsDB.length > 0) {
+        const trip = tripsDB[0];
+        res.set('Content-Type', 'application/json');
+        res.send(trip);
+    } else {
+        res.sendStatus(404);
+    }
 })
 
 // Setup Server
