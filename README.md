@@ -7,7 +7,7 @@ will be retrieved consuming different API's.
 
 ## Instructions
 ### Environment variables configuration
-Create `.env` file in the root directory containing the following environment variables:
+Create `.env` file (use `.env.example` as a template) in the root directory containing the following environment variables:
 * `GEONAMES_USR`
     - GeoNames user. Used to get geographical data from location names to visit in the application (eg: cities, countries names, etc.)
     - Ref: https://www.geonames.org/export/web-services.html
