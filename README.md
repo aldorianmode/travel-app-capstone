@@ -33,6 +33,8 @@ Run `npm run start` to start backend.
 ### Run tests
 `npm run test`
 
-## Extras
-Stand out section implemented is "**Add end date and display length of trip**"
+## TODO
+* Improve test coverage
+* Improve UI style
+* [BUG]: Arrival date can't be earlier than Departure
 
