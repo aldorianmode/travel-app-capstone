@@ -2,8 +2,8 @@
 
 ## Overview
 This application is intended to group all knowledge learnt in Front End Web Developer Nanodegree.
-Basic functionality is to add information of your next trip (location, start and end date) andn consuming different API's, 
-weather information and image will be retrieved.
+Basic functionality is to add information of your next trip (location, start and end date) while weather information and image from destination
+will be retrieved consuming different API's.
 
 ## Instructions
 
