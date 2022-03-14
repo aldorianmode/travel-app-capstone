@@ -1,11 +1,22 @@
 # Travel App Project - FEND Capstone
 
 ## Overview
-This application is intended to group all knowledge learnt in Front End Web Developer Nanodegree.
+This application is intended to group all knowledge learnt in Udacity's Front End Web Developer Nanodegree.
 Basic functionality is to add information of your next trip (location, start and end date) while weather information and image from destination
 will be retrieved consuming different API's.
 
 ## Instructions
+### Environment variables configuration
+Create `.env` file containing the following environment variables:
+* `GEONAMES_USR`
+    - GeoNames user. Used to get geographical data from location names to visit in the application (eg: cities, countries names, etc.)
+    - Ref: https://www.geonames.org/export/web-services.html
+* `PIXABAY_API_KEY`
+    - Pixabay API Key. Used to obtain images from places to visit in the application
+    - Ref: https://pixabay.com/api/docs/
+* `WEATHERBIT_API_KEY`
+    - Weatherbit API Key. Used to obtain weather forecast from places to visit in the application
+    - Ref: https://www.weatherbit.io/api
 
 ### Build
 #### Production
